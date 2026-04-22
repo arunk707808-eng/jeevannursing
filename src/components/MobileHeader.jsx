@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import MobileSidebar from "./MobileSidebar";
+import logoImg from "../assets/logo.webp";
 
 export default function MobileHeader() {
   const [show, setShow] = useState(true);
@@ -39,7 +40,7 @@ export default function MobileHeader() {
 
         {/* LOGO */}
         <div className="flex flex-col">
-          <img src="..\src\assets\logo.png" alt="logo" className="w-7 h-7 rounded-full" />
+          <img src={logoImg} alt="logo" className="w-7 h-7 rounded-full" />
           <p className="text-[12px]">Jeevan Nursing HomeCare</p>
         </div>
         

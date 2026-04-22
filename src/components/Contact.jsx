@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { LoaderCircle } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import axios from "axios";
+
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -66,8 +66,9 @@ if (!data.email) {
     try {
       const formData = new FormData();
       formData.append("data", JSON.stringify(data));
+      
       await Promise.all([
-        await fetch("https://script.google.com/macros/s/AKfycbxDm8ocAuocn2CKLAC9PJVpsz7ZYTMEEOuIx-mHKuYtzxUcfBiXBsJIj1MWV1KtkH8/exec", {
+         fetch("https://script.google.com/macros/s/AKfycbxDm8ocAuocn2CKLAC9PJVpsz7ZYTMEEOuIx-mHKuYtzxUcfBiXBsJIj1MWV1KtkH8/exec", {
   method: "POST",
   body: formData,
 }),

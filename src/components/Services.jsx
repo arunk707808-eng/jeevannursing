@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, HeartPulse, Baby, User } from "lucide-react";
+import { HeartPulse, Baby, User } from "lucide-react";
 
 const services = [
   {
@@ -43,16 +42,9 @@ export default function Services() {
       <div className="mt-12 grid md:grid-cols-3 gap-8">
         {services.map((item, i) => {
           const Icon = item.icon;
-
           return (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.2, duration: 0.5 }}
-              viewport={{ once: true }}
-            >
               <Card
+              key={i}
                 className="group rounded-3xl p-6 bg-white dark:bg-gray-800 
                 shadow-md hover:shadow-xl transition duration-300 border-0"
               >
@@ -73,16 +65,8 @@ export default function Services() {
                   <p className="mt-3 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     {item.desc}
                   </p>
-
-                  {/* LINK */}
-                  {/* <div className="mt-5 flex items-center gap-2 text-teal-600 font-medium cursor-pointer group-hover:gap-3 transition-all">
-                    View Details
-                    <ArrowRight size={16} />
-                  </div> */}
-
                 </CardContent>
               </Card>
-            </motion.div>
           );
         })}
       </div>

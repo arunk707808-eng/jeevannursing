@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 
+
 export default function MobileSidebar({ open, setOpen }) {
   const [active, setActive] = useState("home");
 

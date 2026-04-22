@@ -51,7 +51,6 @@ export default function Testimonials() {
                 <h3 className="mt-4 font-semibold text-gray-900 dark:text-white">
                   {item.name}
                 </h3>
-
                 ⭐⭐⭐⭐⭐
               </div>
             </div>

@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { X } from "lucide-react";
-
-import img7 from "../assets/unnamed (3).png";
+import img1 from "../assets/img7.webp";
 import img2 from "../assets/img13.webp";
 import img3 from "../assets/img14.webp";
-import img4 from "../assets/img4.jpg";
+import img4 from "../assets/img6.webp";
 import img5 from "../assets/img5.webp";
 import img6 from "../assets/img6.webp";
-import img1 from "../assets/img7.webp";
+import img7 from "../assets/babyCare.webp";
 import img8 from "../assets/img8.webp";
 import img9 from "../assets/img9.webp";
 import img10 from "../assets/img10.webp";
@@ -37,16 +36,11 @@ export default function Gallery() {
 
   return (
     <section className="py-20 px-6 md:px-16 bg-[#f7f9f9] dark:bg-gray-900">
-      {/* HEADER */}
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
           Gallery
         </h2>
-
-        
       </div>
-
-      {/* PREVIEW GRID (sirf 4 images) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[200px]">
         {images.slice(0, 3).map((img, i) => (
           <motion.div
@@ -59,7 +53,7 @@ export default function Gallery() {
               ${i === 0 ? "md:col-span-2 md:row-span-2" : ""}
               ${i === 3 ? "md:col-span-2" : ""}`}
           >
-            <img src={img} className="w-full h-full object-fill" />
+            <img src={img} loading="lazy" className="w-full h-full object-fill" />
           </motion.div>
         ))}
       </div>
@@ -110,6 +104,7 @@ export default function Gallery() {
               <div className="flex items-center justify-center h-[80vh]">
                 <img
                   src={selected}
+                  loading="lazy"
                   className="max-w-full max-h-full object-contain rounded-xl"
                 />
               </div>
@@ -120,6 +115,8 @@ export default function Gallery() {
                   <img
                     key={i}
                     src={img}
+                    loading="lazy"
+                    onLoad={(e) => e.target.classList.remove("blur-sm")}
                     onClick={() => setSelected(img)}
                     className="w-full h-50 object-cover rounded-xl cursor-pointer"
                   />

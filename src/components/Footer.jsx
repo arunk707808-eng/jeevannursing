@@ -1,6 +1,7 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { MapPin, Phone, Send } from "lucide-react";
 import { MdEmail } from "react-icons/md";
+import logoImg from "../assets/logo.webp";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
         {/* BRAND */}
         <div>
           <div className="flex items-center gap-2">
-        <img src="..\src\assets\logo.png" alt="" className="w-12 h-12 rounded-full"/>
+        <img src={logoImg} alt="logo" className="w-12 h-12 rounded-full"/>
 <h1 className="font-bold text-xl text-teal-600">Jeevan nursing HomeCare</h1>
       </div>
 

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Phone } from "lucide-react";
 import FloatingCard from "./FloatingCard";
 import { useEffect, useState } from "react";
+import heroImg from "../assets/heroImage.webp";
 
 const branches = [
   { name: "Gwalior", phone: "+919876543210" },
@@ -70,8 +71,8 @@ export default function Hero() {
           className="relative"
         >
           <img
-            src="..\src\assets\unnamed.png"
-            alt="home care"
+            src={heroImg}
+            alt="heroPage"
             className="rounded-[30px] shadow-xl w-full h-125 object-cover"
           />
           {/* Floating Card */}

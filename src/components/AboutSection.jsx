@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-import nurseImg from "../assets/unnamed (1).png";
-import tabletImg from "../assets/unnamed (2).png";
+import nurseImg from "../assets/nurse.webp";
+import tabletImg from "../assets/tablet.webp";
 export default function AboutSection() {
   return (
     <section className="py-20 px-6 md:px-16 bg-[#f7f9f9] dark:bg-gray-900">

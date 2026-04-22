@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ModeToggle } from "./mode-toggle";
 import { Button } from "@/components/ui/button";
+import logoImg from "../assets/logo.webp";
 
 export function Navbar() {
   const [active, setActive] = useState("home");
@@ -9,7 +10,6 @@ export function Navbar() {
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "services", label: "Services" },
-
     { id: "howitworks", label: "How It Works" }, // ✅ FIXED
     { id: "contact", label: "Contact" },
   ];
@@ -48,8 +48,8 @@ export function Navbar() {
       {/* LOGO */}
       <div className="flex items-center gap-2">
         <img
-          src="..\src\assets\logo.png"
-          alt=""
+          src={logoImg}
+          alt="logo"
           className="w-12 h-12 rounded-full"
         />
         <h1 className="font-bold text-xl text-teal-500">
@@ -71,7 +71,6 @@ export function Navbar() {
             }`}
           >
             {link.label}
-
             {/* 🔥 underline indicator */}
             {active === link.id && (
               <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-teal-500 rounded"></span>

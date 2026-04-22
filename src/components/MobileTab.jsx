@@ -19,13 +19,13 @@ export function MobileTab() {
   // 🔥 SCROLL SPY
   useEffect(() => {
     const handleScroll = () => {
-      let current = "home";
+      let current;
 
       tabs.forEach((tab) => {
         const section = document.getElementById(tab.id);
 
         if (section) {
-          const top = section.offsetTop - 100;
+          const top = section.offsetTop - 120;
           const height = section.offsetHeight;
 
           if (

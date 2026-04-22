@@ -50,7 +50,7 @@ export default function Process() {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
         className="flex flex-col md:flex-row justify-between items-start md:items-center mb-9"
       >
