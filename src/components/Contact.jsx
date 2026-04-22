@@ -82,6 +82,7 @@ if (!data.email) {
 
       setFormData(data); // ✅ save for WhatsApp
       setSuccess(true);
+      alert("submitted successfully")
       form.reset();
 
     } catch (err) {
@@ -141,16 +142,14 @@ Message: ${formData.message}`;
 
           <Button
             onClick={handleWhatsApp}
-            className="bg-teal-600 text-white px-6 py-3 rounded-full"
+            className="bg-teal-600 text-white px-6 py-2 h-10 rounded-full"
           >
             Continue to WhatsApp
           </Button>
         </div>
       ) : (
         <form onSubmit={handleSubmit} noValidate className="space-y-5">
-          {error && (
-            <p className="text-red-500 text-sm">{error}</p>
-          )}
+          
 
           <div className="flex flex-col md:flex-row gap-4">
             <input
@@ -200,11 +199,13 @@ Message: ${formData.message}`;
             placeholder="How can we help you?"
             className="w-full bg-gray-100 dark:bg-gray-700 p-3 rounded-2xl h-28 outline-none focus:ring-2 focus:ring-teal-400 transition"
           />
-
+          {error && (
+            <p className="text-red-500 text-sm">{error}</p>
+          )}
           <Button
            type="submit"
             disabled={loading}
-            className="w-full flex items-center justify-center bg-linear-to-r from-teal-500 to-teal-600 hover:scale-[1.02] active:scale-95 transition text-white py-4 rounded-full shadow-lg disabled:opacity-70"
+            className="w-full flex items-center justify-center bg-linear-to-r from-teal-500 to-teal-600 hover:scale-[1.02] active:scale-95 transition text-white py-4 h-10 rounded-full shadow-lg disabled:opacity-70"
           >
             {loading ? (
               <LoaderCircle className="animate-spin w-5 h-5 mx-auto block" />

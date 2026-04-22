@@ -48,14 +48,14 @@ export default function Hero() {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4">
-            <Button className="bg-teal-500 hover:bg-teal-600 text-white rounded-full px-6 py-3 shadow-lg">
+            <Button className="bg-teal-500 hover:bg-teal-600 text-white rounded-full px-6 py-3 h-9 shadow-lg">
               <a href="#book">
                 Book Now →
               </a>
             </Button>
               <Button onClick={()=>setIsOpen(true)}
                 variant="secondary"
-                className="rounded-full px-6 py-3 flex items-center gap-2"
+                className="rounded-full px-6 py-3 h-9 flex items-center gap-2"
               >
                 <Phone size={18} />
                 Call Now
