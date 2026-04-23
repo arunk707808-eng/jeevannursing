@@ -95,15 +95,12 @@ if (!data.email) {
 
   const handleWhatsApp = () => {
     if (!formData) return;
-
     const whatsappNumbers = {
       delhi: "918477930875",
       gwalior: "916395421849",
     };
-
     const number = whatsappNumbers[formData.city];
     if (!number) return;
-
     const text = `Hello, I found you on your website.
 
 Name: ${formData.name}
@@ -118,11 +115,7 @@ Message: ${formData.message}`;
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 60 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+    <div
       id="book"
       className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-6 md:p-8 shadow-xl"
     >
@@ -132,8 +125,6 @@ Message: ${formData.message}`;
       <p className="text-gray-600 dark:text-gray-300 text-sm mb-6">
         Schedule a discovery call with our care specialists.
       </p>
-
-      {/* ✅ SUCCESS */}
       {success ? (
         <div className="text-center space-y-4">
           <p className="text-green-600 font-medium">
@@ -215,6 +206,6 @@ Message: ${formData.message}`;
           </Button>
         </form>
       )}
-    </motion.div>
+    </div>
   );
 }

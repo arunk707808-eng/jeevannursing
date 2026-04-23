@@ -43,7 +43,7 @@ export default function Gallery() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[200px]">
         {images.slice(0, 3).map((img, i) => (
-          <motion.div
+          <div
             key={i}
             onClick={() => {
               setSelected(img);
@@ -54,7 +54,7 @@ export default function Gallery() {
               ${i === 3 ? "md:col-span-2" : ""}`}
           >
             <img src={img} loading="lazy" className="w-full h-full object-fill" />
-          </motion.div>
+          </div>
         ))}
       </div>
 

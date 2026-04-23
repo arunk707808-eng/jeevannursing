@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
-
+import logoImg from "../assets/logo.webp";
 
 export default function MobileSidebar({ open, setOpen }) {
   const [active, setActive] = useState("home");
@@ -11,7 +11,6 @@ export default function MobileSidebar({ open, setOpen }) {
     { id: "about", label: "About" },
     { id: "services", label: "Services" },
     { id: "howitworks", label: "How It Works" },
-    { id: "whychooseus", label: "Why Choose Us" },
     { id: "testimonials", label: "Testimonials" },
     { id: "faq", label: "FAQ" },
     { id: "contact", label: "Contact" },
@@ -25,7 +24,7 @@ export default function MobileSidebar({ open, setOpen }) {
   },[open])
   useEffect(() => {
     const handleScroll = () => {
-      let current;
+      let current="";
 
       links.forEach((link) => {
         const section = document.getElementById(link.id);
@@ -69,12 +68,12 @@ export default function MobileSidebar({ open, setOpen }) {
 
             {/* TOP */}
             <div className="flex justify-between items-center mb-6">
-              <h1 className="font-bold text-lg text-teal-600">
-                Caring Patient
-              </h1>
+              <div className="flex flex-col">
+                        <img src={logoImg} alt="logo" className="w-9 h-9 rounded-full" />
+                        <p className="text-[15px]">Jeevan Nursing HomeCare</p>
+                      </div>
 
               <div className="flex items-center gap-3">
-                <Moon />
                 <X onClick={() => setOpen(false)} className="cursor-pointer" />
               </div>
             </div>

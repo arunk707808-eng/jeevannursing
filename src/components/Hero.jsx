@@ -33,20 +33,17 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Badge className="bg-teal-100 text-teal-600 px-4 py-1 mt-4 rounded-full">
+          <Badge className="bg-teal-100 text-teal-600 px-4 py-1 mt-6 rounded-full">
             Excellence in Home Healthcare
           </Badge>
-
           <h1 className="mt-4 text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
             Best Home <span className="text-teal-500">Care</span> Services.
           </h1>
-
           <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-lg">
             Reimagining the clinical experience within the comfort of your
             sanctuary. We bring elite medical precision and heartfelt warmth to
             your doorstep.
           </p>
-
           <div className="mt-6 flex flex-wrap gap-4">
             <Button className="bg-teal-500 hover:bg-teal-600 text-white rounded-full px-6 py-3 h-9 shadow-lg">
               <a href="#book">
@@ -62,8 +59,6 @@ export default function Hero() {
               </Button>
           </div>
         </motion.div>
-
-        {/* RIGHT */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -75,7 +70,6 @@ export default function Hero() {
             alt="heroPage"
             className="rounded-[30px] shadow-xl w-full h-125 object-cover"
           />
-          {/* Floating Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,7 +81,6 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
-    {/* modal */}
     {isOpen && 
     <div
       className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50"
@@ -101,31 +94,26 @@ export default function Hero() {
         <h2 className="text-xl font-semibold text-gray-800 mb-4">
           Select Branch 📍
         </h2>
-        {/* Branch Select */}
         <div className="space-y-2 mb-5">
           {branches.map((branch, i) => (
             <div
               key={i}
               onClick={() => setSelectedBranch(branch)}
-              className={`p-3 rounded-xl border cursor-pointer transition ${
+              className={`p-3 rounded-xl  border cursor-pointer transition ${
                 selectedBranch.name === branch.name
                   ? "bg-teal-500 text-white border-teal-500"
-                  : "hover:bg-teal-50 border-gray-200"
+                  : "hover:bg-teal-50 text-black border-gray-200"
               }`}
             >
               {branch.name}
             </div>
           ))}
         </div>
-
-        {/* Call Button */}
         <a href={`tel:${selectedBranch.phone}`}>
           <button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-xl font-medium transition">
             Confirm Call 
           </button>
         </a>
-
-        {/* Close */}
         <button
           onClick={()=>setIsOpen(false)}
           className="mt-3 w-full text-sm text-gray-500 hover:text-gray-700"
@@ -135,7 +123,6 @@ export default function Hero() {
       </div>
     </div>
     }
-   
 </>
   );
 }

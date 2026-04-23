@@ -19,17 +19,6 @@ const steps = [
   },
 ];
 
-// 🔥 container animation (stagger)
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-// 🔥 item animation
 const item = {
   hidden: { opacity: 0, y: 50 },
   show: {
@@ -69,11 +58,8 @@ export default function Process() {
       </motion.div>
 
       {/* STEPS */}
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
+      <div
+        
         className="relative grid md:grid-cols-3 overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-700"
       >
         {/* vertical dividers */}
@@ -105,7 +91,7 @@ export default function Process() {
             <div className="mt-6 h-1 w-0 bg-teal-500 group-hover:w-10 transition-all duration-300"></div>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }
