@@ -17,7 +17,7 @@ export function Navbar() {
   // 🔥 SCROLL SPY
   useEffect(() => {
     const handleScroll = () => {
-      let current;
+      let current="";
 
       links.forEach((link) => {
         const section = document.getElementById(link.id);
@@ -46,7 +46,8 @@ export function Navbar() {
       backdrop-blur-lg bg-white/70 dark:bg-gray-900/70"
     >
       {/* LOGO */}
-      <div className="flex items-center gap-2">
+      <a href="#home">
+        <div className="flex items-center gap-2">
         <img
           src={logoImg}
           alt="logo"
@@ -56,6 +57,7 @@ export function Navbar() {
           Jeevan nursing HomeCare
         </h1>
       </div>
+      </a>
 
       {/* LINKS */}
       <div className="flex gap-8">

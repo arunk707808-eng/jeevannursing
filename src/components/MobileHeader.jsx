@@ -39,12 +39,12 @@ export default function MobileHeader() {
         border-b border-gray-200 dark:border-gray-800">
 
         {/* LOGO */}
-        <div className="flex flex-col">
+        <a href="#home">
+ <div className="flex flex-col">
           <img src={logoImg} alt="logo" className="w-9 h-9 rounded-full" />
           <p className="text-[15px]">Jeevan Nursing HomeCare</p>
         </div>
-        
-
+        </a>
         {/* MENU ICON */}
         <div className="flex gap-2 items-center">
           <ModeToggle size={22} />

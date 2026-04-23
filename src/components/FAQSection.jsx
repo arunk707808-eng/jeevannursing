@@ -17,6 +17,7 @@ export default function FAQSection() {
       className="py-10 px-6 md:px-16 bg-[#f7f9f9] dark:bg-gray-900"
     >
       <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
             Frequently Asked Questions
           </h2>
@@ -48,11 +49,7 @@ export default function FAQSection() {
             ))}
           </Accordion>
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            viewport={{ once: true }}
+          <div
             className="mt-6 bg-linear-to-r from-teal-600 to-teal-500 text-white rounded-2xl p-6 shadow-lg"
           >
             <h3 className="text-xl font-semibold">Contact Details</h3>
@@ -108,7 +105,8 @@ export default function FAQSection() {
                 <p className="text-md font-bold mt-3 tracking-wide"></p>
               </div>
             </div>
-          </motion.div>
+          </div>
+          </div>
         <section>
           <Contact />
         </section>

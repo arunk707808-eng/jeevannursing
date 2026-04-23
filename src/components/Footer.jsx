@@ -10,11 +10,12 @@ export default function Footer() {
       <div className="grid md:grid-cols-3 gap-10">
         {/* BRAND */}
         <div>
-          <div className="flex items-center gap-2">
+          <a href="#home">
+ <div className="flex items-center gap-2">
         <img src={logoImg} alt="logo" className="w-12 h-12 rounded-full"/>
 <h1 className="font-bold text-xl text-teal-600">Jeevan nursing HomeCare</h1>
       </div>
-
+          </a>
           <p className="mt-4 text-gray-300 text-sm">
             Premium homecare reimagined through medical precision and heartfelt
             human connection.
