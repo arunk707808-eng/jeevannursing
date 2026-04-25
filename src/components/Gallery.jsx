@@ -67,7 +67,6 @@ export default function Gallery() {
           Show More Photos
         </Button>
       </div>
-
       {/* 🔥 MODAL FULL GALLERY */}
       {open && (
         <div className="fixed inset-0 z-9999 flex items-center justify-center">

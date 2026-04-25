@@ -17,7 +17,7 @@ export default function AboutSection() {
             >
               <img
                 src={nurseImg}
-                alt="nurse"
+                alt="Home nursing services in Gwalior by trained nurse"
                 className="w-full h-70 object-cover rounded-3xl shadow-lg"
               />
             </motion.div>
@@ -55,7 +55,7 @@ export default function AboutSection() {
             >
               <img
                 src={tabletImg}
-                alt="tablet"
+                alt="Healthcare monitoring and patient care services"
                 className="w-full h-70 object-cover rounded-3xl shadow-lg"
               />
             </motion.div>
@@ -69,20 +69,22 @@ export default function AboutSection() {
         >
           <p className="text-teal-600 font-semibold mb-2">OUR APPROACH</p>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
-            Where Clinical Science Meets Human Warmth.
+           About Jeevan Nursing Home Care Services
           </h2>
+          <h3 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white leading-tight">Trusted Home Nursing Services in Gwalior & Delhi with Experienced Caregivers</h3>
           <p className="mt-4 text-gray-600 dark:text-gray-300">
-            At Sanctuary, we believe healing happens best where you feel most at
-            home. Our team of professionals is dedicated to bringing
-            medical-grade care into your personal space with dignity and
-            respect.
+          Jeevan Nursing Home Care services provides professional home nursing services in Gwalior and Delhi, delivering quality patient care at home with trained nurses and caregivers.
+<br />
+We offer elderly care, post-surgery care, and daily medical assistance, focusing on safety, hygiene, and personalized support for every patient.
           </p>
           {/* POINTS */}
           <div className="mt-6 space-y-3">
             {[
-              "Personalized Care Plans for every patient",
-              "24/7 Support from qualified nursing staff",
-              "Real-time health monitoring and reporting",
+              "Experienced and trained nursing staff",
+              "24/7 patient care support",
+              "Home care services in Gwalior & Delhi",
+              "Personalized care plans for every patient",
+              "Quick response and reliable service"
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3">
                 <CheckCircle className="text-teal-500" size={20} />

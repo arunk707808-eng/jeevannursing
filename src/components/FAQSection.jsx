@@ -13,7 +13,6 @@ import Contact from "./Contact";
 export default function FAQSection() {
   return (
     <section
-      id="contact"
       className="py-10 px-6 md:px-16 bg-[#f7f9f9] dark:bg-gray-900"
     >
       <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -24,16 +23,28 @@ export default function FAQSection() {
           <Accordion type="single" collapsible className="space-y-4">
             {[
               {
-                q: "Is homecare covered by insurance?",
-                a: "We accept most major insurance providers. Our team helps verify your benefits.",
+                q: "Do you provide home nursing services in Delhi?",
+                a: "Yes, we provide professional home nursing and patient care services in Delhi with trained and experienced caregivers.",
               },
               {
-                q: "How quickly can care start?",
-                a: "Care can usually begin within 24–48 hours after assessment.",
+                q: "What services are included in patient care at home?",
+                a: "Our patient care services include daily assistance, medication support, mobility help, hygiene care, and monitoring for better recovery at home.",
               },
               {
                 q: "Do you offer 24/7 support?",
                 a: "Yes, our care team is available 24/7 for emergencies and assistance.",
+              },
+              {
+                q: "How can I book a home nursing service?",
+                a: "You can book our services by calling us or contacting us on WhatsApp for quick assistance and support.",
+              },
+              {
+                q: "Do you provide home nursing services in Gwalior?",
+                a: "Yes, we provide professional home nursing and patient care services in Gwalior with trained and experienced caregivers.",
+              },
+              {
+                q: "What are home nursing services?",
+                a: "Home nursing services provide medical and non-medical care at home, including patient care, elderly care, post-surgery support, and daily assistance by trained nurses and caregivers.",
               },
             ].map((item, i) => (
                 <AccordionItem
@@ -49,7 +60,7 @@ export default function FAQSection() {
             ))}
           </Accordion>
 
-          <div
+          <div id="contact"
             className="mt-6 bg-linear-to-r from-teal-600 to-teal-500 text-white rounded-2xl p-6 shadow-lg"
           >
             <h3 className="text-xl font-semibold">Contact Details</h3>
@@ -60,13 +71,13 @@ export default function FAQSection() {
                   <span>
                     <Phone />
                   </span>
-                  <span className="font-semibold">Phone-</span> +91 8305295810
+                  <span className="font-semibold">Phone-</span> +91 11111111111
                 </p>
                 <p className="text-md mt-1 opacity-90 flex gap-2 items-center">
                   <span>
                     <MdEmail size={30} />
                   </span>
-                  <span className="font-semibold">Email-</span> arunk@gmial.com
+                  <span className="font-semibold">Email-</span> example@gmial.com
                 </p>
                 <p className="text-md mt-1 opacity-90 flex gap-2 items-center">
                   <span>
@@ -85,13 +96,13 @@ export default function FAQSection() {
                   <span>
                     <Phone />
                   </span>
-                  <span className="font-semibold">Phone-</span> +91 8305295810
+                  <span className="font-semibold">Phone-</span> +91 2222222222
                 </p>
                 <p className="text-md mt-1 opacity-90 flex gap-2 items-center">
                   <span>
                     <MdEmail size={30} />
                   </span>
-                  <span className="font-semibold">Email-</span> arunk@gmial.com
+                  <span className="font-semibold">Email-</span> example@gmial.com
                 </p>
                 <p className="text-md mt-1 opacity-90 flex gap-2 items-center">
                   <span>
@@ -107,7 +118,7 @@ export default function FAQSection() {
             </div>
           </div>
           </div>
-        <section>
+        <section id="book">
           <Contact />
         </section>
       </div>

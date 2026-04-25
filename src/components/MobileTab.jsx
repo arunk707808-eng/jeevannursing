@@ -13,7 +13,7 @@ export function MobileTab() {
     { id: "home", label: "Home", icon: Home, link: "#home" },
     { id: "services", label: "Services", icon: BriefcaseMedical, link: "#services" },
     { id: "contact", label: "Contact", icon: Phone, link: "#contact" },
-    { id: "book", label: "Book", icon: BookOpenText, link: "#book" },
+    { id: "book", label: "Booking", icon: BookOpenText, link: "#book" },
   ];
 
   // 🔥 SCROLL SPY
@@ -46,7 +46,7 @@ export function MobileTab() {
 
   return (
     <div
-      className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] max-w-md 
+      className="fixed bottom-1 left-1/2 -translate-x-1/2 w-[95%] max-w-md 
       bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg 
       shadow-xl rounded-2xl flex justify-around py-3 z-50 md:hidden border"
     >

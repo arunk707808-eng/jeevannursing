@@ -1,9 +1,24 @@
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
 import { LoaderCircle } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
+const items = ["Nursing Staff (Male/Female)",
+  "Attendant",
+  "GDA Staff (Male/Female)",
+  "Baby Care",
+  "Physiotherapist",
+  "Doctor Visit at Home",
+  "Patient Bed",
+  "Suction Machine",
+  "Nebulizer Machine",
+  "Pulse Oximeter",
+  "DVT Pump",
+  "Air Bed",
+  "Oxygen Concentrator",
+  "Oxygen Cylinder",
+  "Patient Monitor",
+  "Medication Delivery",]
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -116,7 +131,6 @@ Message: ${formData.message}`;
 
   return (
     <div
-      id="book"
       className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-6 md:p-8 shadow-xl"
     >
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -180,9 +194,9 @@ Message: ${formData.message}`;
             className="w-full bg-gray-100 dark:bg-gray-700 p-3 rounded-full outline-none focus:ring-2 focus:ring-teal-400 transition"
           >
             <option value="">Select Service</option>
-            <option value="Elder care">Elder Care</option>
-            <option value="nursing">Nursing</option>
-            <option value="baby care">Baby Care</option>
+            {items.map((item,i)=>(
+              <option  key={i} value={item}>{item}</option>
+            ))}
           </select>
 
           <textarea

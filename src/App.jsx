@@ -10,6 +10,7 @@ import AboutSection from "./components/AboutSection.jsx";
 import { MobileTab } from "./components/MobileTab.jsx";
 import { Navbar } from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
+import FloatingButtons from "./components/FloatingButtons.jsx";
 
 const Services = lazy(() => import("./components/Services.jsx"));
 const Process = lazy(() => import("./components/Process.jsx"));
@@ -56,6 +57,7 @@ const App = () => {
         <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
         <Footer />
         </Suspense>
+        <FloatingButtons/>
         <MobileTab />
       </div>
     </>

@@ -15,27 +15,20 @@ const testimonials = [
     text: "Highly recommended for elder care.",
   },
 ];
-
 export default function Testimonials() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-
-  // autoplay
   useEffect(() => {
     if (!emblaApi) return;
-
     const interval = setInterval(() => {
       emblaApi.scrollNext();
     }, 3000);
-
     return () => clearInterval(interval);
   }, [emblaApi]);
-
   return (
     <section className=" bg-gray-50 dark:bg-gray-900">
       <h2 className="text-2xl font-bold text-center mb-8">
         What Our Clients Say
       </h2>
-
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex py-2">
           {testimonials.map((item, index) => (

@@ -11,7 +11,6 @@ const branches = [
   { name: "Gwalior", phone: "+919876543210" },
   { name: "Delhi", phone: "+911234567890" }
 ];
-
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false)
    const [selectedBranch, setSelectedBranch] = useState(branches[0]);
@@ -37,12 +36,10 @@ export default function Hero() {
             Excellence in Home Healthcare
           </Badge>
           <h1 className="mt-4 text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-            Best Home <span className="text-teal-500">Care</span> Services.
+            Best Home <span className="text-teal-500">Care</span> Services in Gwalior & Delhi
           </h1>
           <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-lg">
-            Reimagining the clinical experience within the comfort of your
-            sanctuary. We bring elite medical precision and heartfelt warmth to
-            your doorstep.
+           Professional home nursing services in Gwalior & Delhi with 24/7 patient care, elderly care, and trained caregivers at home.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <Button className="bg-teal-500 hover:bg-teal-600 text-white rounded-full px-6 py-3 h-9 shadow-lg">
@@ -67,7 +64,7 @@ export default function Hero() {
         >
           <img
             src={heroImg}
-            alt="heroPage"
+            alt="Home nursing service in Gwalior with nurse assisting elderly patient"
             className="rounded-[30px] shadow-xl w-full h-125 object-cover"
           />
           <motion.div

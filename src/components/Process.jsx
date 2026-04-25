@@ -36,26 +36,23 @@ export default function Process() {
     <section className="px-6 md:px-16 bg-[#f7f9f9] dark:bg-gray-900 py-10">
 
       {/* HEADER */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+      <div
+        
         className="flex flex-col md:flex-row justify-between items-start md:items-center mb-9"
       >
         <div>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
-            Our Seamless Process
+            How Our Services Work
           </h2>
           <p className="mt-2 text-gray-600 dark:text-gray-300">
-            Simple steps to bring elite clinical care into your home.
+           Simple steps to get professional home nursing and patient care services at home.
           </p>
         </div>
 
         <div className="flex items-center gap-2 text-teal-600 mt-4 md:mt-0 cursor-pointer">
           How it works <ArrowDown size={16} />
         </div>
-      </motion.div>
+      </div>
 
       {/* STEPS */}
       <div
@@ -92,6 +89,7 @@ export default function Process() {
           </motion.div>
         ))}
       </div>
+      <p className="mt-2 text-gray-600 mt-6 dark:text-gray-300">We provide reliable home nursing and patient care services across Gwalior and Delhi with trained staff and 24/7 support.</p>
     </section>
   );
 }

@@ -13,7 +13,6 @@ export function Navbar() {
     { id: "howitworks", label: "How It Works" }, // ✅ FIXED
     { id: "contact", label: "Contact" },
   ];
-
   // 🔥 SCROLL SPY
   useEffect(() => {
     const handleScroll = () => {
